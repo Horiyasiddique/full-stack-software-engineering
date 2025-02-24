@@ -78,6 +78,108 @@
     <!--video tag-->
     <video src="https://cdn.pixabay.com/video/2022/12/15/143065-781991129_large.mp4" autoplay loop muted
         style="width: 80vw; height: 80vh;"></video>
+
+    <!--forms-->
+    <form action="#">
+        <!--personal Info-->
+        <fieldset>
+            <legend>Personal Information</legend>
+            <label for="name">Name</label>
+            <input type="text" name="name" id="name" placeholder="Enter your name here ...">
+            <br><br>
+            <label for="age">Age</label>
+            <input type="number" name="age" id="age" placeholder="Enter your Age...">
+            <br><br>
+            <label for="DOB">Date Of Birth</label>
+            <input type="date" name="DOB" id="DOB">
+            <br><br>
+            <label for="color">Favorite Color</label>
+            <input type="color" name="color" id="color">
+            <br><br>
+            <label for="city">Choose Your City</label>
+            <select name="city" id="city">
+                <option value="Karachi">Karachi</option>
+                <option value="Lahore">Lahore</option>
+                <option value="Peshawar">Peshawar</option>
+                <option value="Quetta">Quetta</option>
+            </select>
+            <br><br>
+            <label for="country">Choose Your Country</label>
+            <select name="country" id="country">
+                <option value="Pakistan">Pakistan</option>
+                <option value="India">India</option>
+                <option value="Turkey">Turkey</option>
+                <option value="America">America</option>
+            </select>
+
+            <br><br>
+            <label for="fav-lang"> Choose your Favorite Language
+                <input type="radio" name="fav-lang" id="fav-lang" value="Python"> Python
+            </label>
+            <label for="fav-lang">
+                <input type="radio" name="fav-lang" id="fav-lang" value="JavaScript"> JavaScript
+            </label>
+            <label for="fav-lang">
+                <input type="radio" name="fav-lang" id="fav-lang" value="C"> C
+            </label>
+            <br><br>
+            <label for="fav_dish">Choose Your Favorite dish
+                <input type="checkbox" name="fav_dish" id="fav_dish" value="Biryani">Biryani
+            </label>
+            <label for="fav_dish">
+                <input type="checkbox" name="fav_dish" id="fav_dish" value="Korma">Korma
+            </label>
+            <label for="fav_dish">
+                <input type="checkbox" name="fav_dish" id="fav_dish" value="Gushtabe">Gushtabe
+            </label>
+            <label for="fav_dish">
+                <input type="checkbox" name="fav_dish" id="fav_dish" value="Mutton Handi">Mutton Handi
+            </label>
+        </fieldset>
+
+        <!--contact Info-->
+        <fieldset>
+            <legend>Contact Information</legend>
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" placeholder="Enter your email">
+            <br><br>
+            <label for="phone">Phone</label>
+            <input type="tel" name="phone" id="phone" placeholder="Enter your Phone Number">
+            <br><br>
+        </fieldset>
+
+        <!--Professional Info-->
+        <fieldset>
+            <legend>Professional Information</legend>
+            <label for="image">Upload Professional Image</label>
+            <input type="image" name="image" id="image">
+            <br><br>
+            <label for="cv">Drop Your CV here</label>
+            <input type="file" name="cv" id="cv">
+            <br><br>
+            <label for="portfolio">Portfolio</label>
+            <input type="url" name="portfolio" id="portfolio" placeholder="Portfolio link ...">
+            <br><br>
+            <label for="skills">Your Efficiency</label>
+            <input type="range" name="skills" id="skills">
+        </fieldset>
+        <button type="submit">Submit</button>
+        <button type="reset">Clear Form</button>
+    </form>
+
+    <br><br><br><hr><br>
+
+    <!--login form-->
+    <h1>Login Form</h1>
+    <form action="">
+    <label for="email">Email</label>
+    <input type="email" name="email" id="email" placeholder="Email ...">
+    <br><br>
+    <label for="password">password</label>
+    <input type="password" name="password" id="password" placeholder="password">
+    <br><br>
+    <button type="submit">Login</button>
+</form>
 </body>
 
 </html>
