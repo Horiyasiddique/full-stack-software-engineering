@@ -79,6 +79,7 @@
     <video src="https://cdn.pixabay.com/video/2022/12/15/143065-781991129_large.mp4" autoplay loop muted
         style="width: 80vw; height: 80vh;"></video>
 
+
     <!--forms-->
     <form action="#">
         <!--personal Info-->
@@ -167,19 +168,138 @@
         <button type="reset">Clear Form</button>
     </form>
 
-    <br><br><br><hr><br>
+    <br><br><br>
+    <hr><br>
 
     <!--login form-->
     <h1>Login Form</h1>
     <form action="">
-    <label for="email">Email</label>
-    <input type="email" name="email" id="email" placeholder="Email ...">
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email" placeholder="Email ...">
+        <br><br>
+        <label for="password">password</label>
+        <input type="password" name="password" id="password" placeholder="password">
+        <br><br>
+        <button type="submit">Login</button>
+    </form>
+    <br> <br>
+
+    <!--tables in HTML-->
+    <table border="1" width="40%" cellpadding="8" cellspacing="1">
+        <!--table head-->
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>Sara</td>
+                <td>22</td>
+            </tr>
+            <tr>
+                <td>Hooriya</td>
+                <td>14</td>
+            </tr>
+            <tr>
+                <td>Nudrat</td>
+                <td>19</td>
+            </tr>
+        </tbody>
+    </table>
+
     <br><br>
-    <label for="password">password</label>
-    <input type="password" name="password" id="password" placeholder="password">
+
+    <!--TABLE EXAMPLE 2-->
+    <table border="1" width="50%" cellpadding="10" cellspacing="0">
+        <!-- Table Head -->
+        <thead>
+            <tr>
+                <th>Student Name</th>
+                <th>Subject</th>
+                <th>Marks</th>
+            </tr>
+        </thead>
+
+        <!-- Table Body -->
+        <tbody>
+            <tr>
+                <td>Ali</td>
+                <td>Math</td>
+                <td>85</td>
+            </tr>
+            <tr>
+                <td>Hooriya</td>
+                <td>Science</td>
+                <td>90</td>
+            </tr>
+            <tr>
+                <td>Ahmed</td>
+                <td>English</td>
+                <td>78</td>
+            </tr>
+        </tbody>
+
+        <!-- Table Footer -->
+        <tfoot>
+            <tr>
+                <td colspan="2"><b>Total Students</b></td>
+                <td><b>3</b></td>
+            </tr>
+        </tfoot>
+    </table>
+
     <br><br>
-    <button type="submit">Login</button>
-</form>
+
+    <!--TABLE EXAMPLE 3-->
+    <table border="2" cellpadding="10" cellspacing="4" width="50%">
+        <thead>
+            <tr>
+                <th rowspan="2">Heading</th>
+                <th>Student</th>
+                <th colspan="4">Details</th>
+            </tr>
+
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Department</th>
+                <th>Roll Number</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <th rowspan="4">Student List</th>
+                <td>1</td>
+                <td>Victor</td>
+                <td>Computer Science</td>
+                <td>12345</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>williams</td>
+                <td>Electronics</td>
+                <td>23456</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Harry</td>
+                <td>Electrical</td>
+                <td>34596</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Rick</td>
+                <td>Civil</td>
+                <td>56778</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <br><br>
 </body>
 
 </html>
