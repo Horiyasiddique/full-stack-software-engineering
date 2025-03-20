@@ -20,13 +20,13 @@ html,body{
 }
 
 .box {
-    width: 200px;
-    height: 200px;
-   background-color: chocolate;
+    width: 250px;
+    height: 250px;
+   background-color: #8bfcbc;
    display: flex;
    justify-content: center;
    align-items: center;
-   font-size: 20px;
+   font-size: 30px;
 
 } 
 
