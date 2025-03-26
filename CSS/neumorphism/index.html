@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neumorphic Music Player</title>
+    <style>
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #121212;
+            color: #fff;
+            font-family: Arial, sans-serif;
+        }
+
+        .music-player {
+            background: #1E1E1E;
+            width: 320px;
+            padding: 20px;
+            border-radius: 20px;
+            box-shadow: 10px 10px 20px #0a0a0a, -10px -10px 20px #292929;
+            text-align: center;
+        }
+
+        .song-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #FF4757;
+        }
+
+        .controls {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 15px;
+        }
+
+        .btn {
+            background: #8B0000;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            border: none;
+            color: #fff;
+            box-shadow: 5px 5px 10px #0a0a0a, -5px -5px 10px #292929;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .btn:active {
+            box-shadow: inset 5px 5px 10px #0a0a0a, inset -5px -5px 10px #292929;
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 10px;
+            border-radius: 20px;
+            background: #292929;
+            margin: 20px 0;
+            box-shadow: inset 5px 5px 10px #0a0a0a, inset -5px -5px 10px #292929;
+        }
+
+        .progress {
+            width: 0;
+            height: 100%;
+            background: #FF4757;
+            border-radius: 20px;
+        }
+
+        .volume {
+            margin-top: 15px;
+        }
+
+        input[type="range"]::-webkit-slider-thumb {
+            background: #8B0000;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="music-player">
+        <div class="song-title">Song Name - Artist</div>
+
+        <div class="progress-bar">
+            <div class="progress"></div>
+        </div>
+
+        <div class="controls">
+            <button class="btn" onclick="prevSong()">⏮️</button>
+            <button class="btn" onclick="playPause()">▶️/⏸️</button>
+            <button class="btn" onclick="nextSong()">⏭️</button>
+        </div>
+
+        <div class="volume">
+            Volume:
+            <input type="range" min="0" max="1" step="0.1" onchange="setVolume(this.value)">
+        </div>
+
+        <audio id="audio">
+            <source src="song.mp3" type="audio/mpeg">
+        </audio>
+    </div>
+
+    <script>
+        const audio = document.getElementById('audio');
+        const progress = document.querySelector('.progress');
+
+        function playPause() {
+            if (audio.paused) {
+                audio.play();
+            } else {
+                audio.pause();
+            }
+        }
+
+        function setVolume(value) {
+            audio.volume = value;
+        }
+
+        audio.addEventListener('timeupdate', () => {
+            const progressPercent = (audio.currentTime / audio.duration) * 100;
+            progress.style.width = progressPercent + '%';
+        });
+
+        function prevSong() {
+            alert('Previous song logic can be added here!');
+        }
+
+        function nextSong() {
+            alert('Next song logic can be added here!');
+        }
+    </script>
+</body>
+
+</html>
