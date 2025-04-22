@@ -440,13 +440,14 @@ body::-webkit-scrollbar-thumb {
 
 /*THANK YOU PAGE STYLING STARTS HERE*/
 
-/* .last-page {
+.last-page {
     max-width: 100vw;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-
+    padding: 0 10vw;
     align-items: center;
+    justify-content: space-between;
     position: relative;
     background-color: #F5EFE1;
 }
@@ -456,9 +457,65 @@ body::-webkit-scrollbar-thumb {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: red;
+    border-bottom: 2px solid #212121;
+    padding: 2vw 6vw;
 
-} */
+}
+
+.last-page .upper-part h2{
+    font-size: 2vw;
+    font-family: anton;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.last-page .upper-part h5{
+    font-family: 'nunito sans';
+    font-size: 1.5vw;
+    font-weight: 700;
+}
+
+.last-page .cross-container{
+    position: absolute;
+    font-size: 3vw;
+    font-weight: 100;
+    color: #515151;
+    filter: blur(0.7px);
+    top: 30%;
+    left: 25%;
+}
+
+.last-page h6{
+    font-size: 8vw;
+    font-family: anton;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 200;
+}
+
+.last-page .lower-part{
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2vw 6vw;
+    font-family: 'nunito sans';
+    font-size: 1.5vw;
+    border-top: 2px solid #212121;
+
+}
+.last-page .lower-part h5{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.last-page .lower-part i{
+    font-size: 2.2vw;
+}
+
 
 i:hover {
     color: burlywood;
@@ -597,6 +654,59 @@ i:hover {
         font-size: 5vw;
         margin-top: 5vw;
     }
+
+    /*THANK YOU SECTION CSS FOR SMALL DEVICES*/
+    .last-page {
+        padding: 5vw;
+        min-height: auto;
+        gap: 10vw;
+    }
+
+    .last-page .upper-part {
+        flex-direction: row;
+    
+        
+        padding: 5vw;
+        border-bottom-width: 1px;
+    }
+
+    .last-page .upper-part h2 {
+        font-size: 3vw;
+      
+    }
+
+    .last-page .upper-part h5 {
+        font-size: 2vw;
+    }
+
+    .last-page .cross-container {
+        font-size: 6vw;
+        top: 25%;
+        left: 5%;
+    }
+
+    .last-page h6 {
+        font-size: 15vw;
+        text-align: center;
+        padding: 6vw 5vw;
+    }
+
+    .last-page .lower-part {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5vw;
+        padding: 5vw;
+        border-top-width: 1px;
+        font-size: 4vw;
+    }
+
+    .last-page .lower-part h5 {
+        font-size: 4vw;
+    }
+
+    .last-page .lower-part i {
+        font-size: 5vw;
+    }
 }
 
 @media (max-width: 480px) {
@@ -614,5 +724,16 @@ i:hover {
 
     .page3 .left #skills {
         font-size: 15vw;
+    }
+    .last-page .upper-part h2 {
+        font-size: 7vw;
+    }
+
+    .last-page h6 {
+        font-size: 18vw;
+    }
+
+    .last-page .lower-part {
+        gap: 6vw;
     }
 }
