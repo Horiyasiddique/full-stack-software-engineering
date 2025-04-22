@@ -1,0 +1,618 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
+
+@font-face {
+    font-family: 'anthonio';
+    src: url('./assets/anthonio_script.zip');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+*::selection {
+    background-color: #fff;
+    color: burlywood;
+}
+
+body::-webkit-scrollbar {
+    display: block;
+    background-color: #f4f4f4;
+    width: 8px;
+
+}
+
+body::-webkit-scrollbar-thumb {
+    display: block;
+    background-color: burlywood;
+    border-radius: 1vw;
+    cursor: grab;
+}
+
+/* HERO SECTION STYLING STARTS HERE  */
+
+.page1 {
+    max-width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5vw;
+    flex-direction: column;
+    background-color: #F5EFE1;
+    position: relative;
+}
+
+.stroke {
+    position: absolute;
+    width: 80px;
+    height: 4px;
+    background-color: black;
+    opacity: 0.9;
+    border-radius: 20px;
+    filter: blur(2px);
+    z-index: 1;
+}
+
+.stroke1 {
+    top: 2%;
+    right: 0%;
+    transform: rotate(-30deg) scaleX(1.4);
+}
+
+.stroke2 {
+    top: 3%;
+    right: 0%;
+    transform: rotate(-32deg) scaleX(0.8);
+}
+
+.stroke3 {
+    top: 2.8%;
+    right: 0%;
+    transform: rotate(-36deg) scaleX(1.2);
+}
+
+.stroke4 {
+    top: 20%;
+    right: 1%;
+    transform: rotate(-30deg) scaleX(1.4);
+}
+
+.stroke5 {
+    top: 21%;
+    right: 0%;
+    transform: rotate(-32deg) scaleX(0.8);
+}
+
+.stroke6 {
+    top: 21.2%;
+    right: 0%;
+    transform: rotate(-36deg) scaleX(1.2);
+}
+
+.stroke7 {
+    top: 30%;
+    right: 0%;
+    transform: rotate(-30deg) scaleX(1.4);
+}
+
+.stroke8 {
+    top: 30.6%;
+    right: 0%;
+    transform: rotate(-32deg) scaleX(0.8);
+}
+
+.stroke9 {
+    top: 31%;
+    right: 0%;
+    transform: rotate(-36deg) scaleX(1.2);
+}
+
+.stroke10 {
+    bottom: 2%;
+    left: 0%;
+    transform: rotate(-30deg) scaleX(1.4);
+}
+
+.stroke11 {
+    bottom: 3%;
+    left: 0%;
+    transform: rotate(-32deg) scaleX(0.8);
+}
+
+.stroke12 {
+    bottom: 2.8%;
+    left: 0%;
+    transform: rotate(-36deg) scaleX(1.2);
+}
+
+.stroke13 {
+    bottom: 20%;
+    left: 1%;
+    transform: rotate(-30deg) scaleX(1.4);
+}
+
+.stroke14 {
+    bottom: 21%;
+    left: 0%;
+    transform: rotate(-32deg) scaleX(0.8);
+}
+
+.stroke15 {
+    bottom: 21.2%;
+    left: 0%;
+    transform: rotate(-36deg) scaleX(1.2);
+}
+
+.stroke16 {
+    bottom: 30%;
+    left: 0%;
+    transform: rotate(-30deg) scaleX(1.4);
+}
+
+.stroke17 {
+    bottom: 30.6%;
+    left: 0%;
+    transform: rotate(-32deg) scaleX(0.8);
+}
+
+.stroke18 {
+    bottom: 31%;
+    left: 0%;
+    transform: rotate(-36deg) scaleX(1.2);
+}
+
+.page1 .cross-container {
+    position: absolute;
+    font-size: 3vw;
+    font-weight: 800;
+    color: #515151;
+    filter: blur(0.7px);
+    top: 18%;
+    left: 24%;
+}
+
+.page1 h1 {
+    font-size: 10vw;
+    color: black;
+    font-weight: 300;
+    font-family: anton;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.page1 .part2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 22px;
+}
+
+.part2 h4 {
+    font-family: sans-serif;
+    font-size: 2vw;
+    font-weight: 200;
+    color: #212121;
+}
+
+.dash {
+    background-color: #212121;
+    height: 2px;
+    width: 25vw;
+    border-radius: 5px;
+}
+
+
+/* HERO SECTON STYLING ENDS HERE  */
+
+/* ABOUT ME SECTION STYLING STARTS HERE */
+
+.page2 {
+    max-width: 100vw;
+    min-height: 80vh;
+    background-color: #F5EFE1;
+    display: flex;
+    align-items: center;
+    padding: 0 7vw;
+    position: relative;
+}
+
+.page2 .cross-container {
+    position: absolute;
+    font-size: 3vw;
+    font-weight: 100;
+    color: #515151;
+    filter: blur(0.7px);
+    top: 20%;
+    right: 15%;
+}
+
+.left-card {
+    width: 30vw;
+    border: none;
+    border-radius: 30px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 10px 10px #B6B1A8;
+
+}
+
+.left-card .upperdiv {
+    width: 100%;
+    height: 10%;
+    padding: 10px 20px;
+    background-color: #fff;
+    color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.left-upper-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.7vw;
+}
+
+.circles {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+.red {
+    background-color: red;
+}
+
+.green {
+    background-color: green;
+}
+
+.yellow {
+    background-color: yellow;
+}
+
+.left-card img {
+    width: 100%;
+    height: 330px;
+    object-fit: cover;
+    background-position: center;
+}
+
+.left-card .lower-div {
+    width: 100%;
+    height: 10%;
+    background-color: #fff;
+    color: #fff;
+    padding: 5px 15px;
+}
+
+.right-text {
+    width: 70vw;
+    padding: 0vw 8vw;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8vw;
+
+}
+
+.right-text h2 {
+    color: black;
+    font-family: montserrat;
+    font-weight: 600;
+    font-size: 4vw;
+    text-transform: uppercase;
+    letter-spacing: -3px;
+
+}
+
+.right-text p {
+    color: black;
+    font-family: 'nunito sans';
+    font-size: 1.4vw;
+    font-weight: 600;
+}
+
+.right-text h3 {
+    color: black;
+    font-family: 'nunito sans';
+    font-size: 2vw;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+.right-text .contact-info {
+    display: flex;
+    padding: 1vw 0;
+    align-items: center;
+    gap: 5vw;
+    font-size: 1.4vw;
+    font-weight: 100;
+    font-family: 'nunito sans';
+}
+
+.right-text .contact-info h5 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 7px;
+}
+
+.right-text .contact-info h5 i {
+    font-size: 2.2vw;
+    font-weight: 100;
+
+}
+
+/* ABOUT ME SECTION STYLING ENDS HERE */
+
+/*SKILLS SECTION STYLING STARTS HERE*/
+
+.page3 {
+    max-width: 100vw;
+    min-height: 100vh;
+    background-color: #F5EFE1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2vw 0 7vw;
+}
+
+.page3 .left {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2vw;
+    position: relative;
+
+}
+
+.page3 .left #software {
+    font-family: 'Kaushan Script';
+    font-weight: 100;
+    font-size: 6vw;
+    letter-spacing: -5px;
+    color: #f84a67;
+
+}
+
+.page3 .left #skills {
+    font-family: anton;
+    font-weight: 200;
+    text-transform: uppercase;
+    font-size: 6.5vw;
+    letter-spacing: 5px;
+    position: absolute;
+    top: 12%;
+    left: 10%;
+
+
+}
+
+.page3 .left ul {
+    margin-top: 3vw;
+}
+
+.page3 .left li {
+    margin-bottom: 2px;
+    font-family: 'nunito sans';
+    color: black;
+    font-weight: 700;
+    list-style-type: square;
+}
+
+.page3 img {
+    width: 324px;
+    height: 355px;
+    object-fit: cover;
+
+}
+
+.page3 .right {
+    display: flex;
+    flex-direction: column;
+    height: 80vh;
+    justify-content: space-between;
+    align-items: flex-end;
+    font-family: anton;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 100;
+    font-size: 1.6vw;
+    width: 100px;
+
+}
+
+/*SKILLS SECTION STYLING ENDS HERE*/
+
+/*THANK YOU PAGE STYLING STARTS HERE*/
+
+/* .last-page {
+    max-width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    position: relative;
+    background-color: #F5EFE1;
+}
+
+.last-page .upper-part {
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: red;
+
+} */
+
+i:hover {
+    color: burlywood;
+    cursor: pointer;
+}
+
+/* MEDIA QUERIES FOR MOBILE DEVICES */
+@media (max-width: 768px) {
+
+    /* Hero Section */
+    .page1 {
+        gap: 10vw;
+    }
+
+    .stroke {
+        width: 40px;
+        height: 2px;
+    }
+
+    .page1 .cross-container {
+        font-size: 6vw;
+        top: 20%;
+        left: 15%;
+    }
+
+    .page1 h1 {
+        font-size: 18vw;
+    }
+
+    .part2 h4 {
+        font-size: 6vw;
+    }
+
+    .dash {
+        width: 33vw;
+    }
+
+    /* About Me Section */
+    .page2 {
+        flex-direction: column;
+        padding: 5vw;
+        min-height: auto;
+        gap: 5vw;
+    }
+
+    .page2 .cross-container {
+        font-size: 6vw;
+        top: 2.4%;
+        right: 5%;
+    }
+
+    .left-card {
+        width: 70vw;
+        margin-top: 12vw;
+    }
+
+    .left-card img {
+        height: 300px;
+    }
+
+    .right-text {
+        width: 100%;
+        padding: 5vw 0;
+    }
+
+    .right-text h2 {
+        font-size: 8vw;
+        font-weight: 600;
+        letter-spacing: -2px;
+    }
+
+    .right-text p {
+        font-size: 5vw;
+        line-height: 6vw;
+        margin-top: 10px;
+    }
+
+    .right-text h3 {
+        font-size: 5vw;
+        margin-top: 10px;
+    }
+
+    .right-text .contact-info {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 3vw;
+        font-size: 5vw;
+    }
+
+    .right-text .contact-info h5 i {
+        font-size: 6vw;
+    }
+
+    /* Skills Section */
+    .page3 {
+        flex-direction: column;
+        padding: 2vw 10vw;
+        min-height: auto;
+        gap: 10vw;
+    }
+
+    .page3 .left {
+        width: 100%;
+        gap: 5vw;
+    }
+
+    .page3 .left #software {
+        font-size: 12vw;
+    }
+
+    .page3 .left #skills {
+        font-size: 13vw;
+        top: 8%;
+        left: 12%;
+    }
+
+    .page3 .left ul {
+        margin-top: 8vw;
+    }
+
+    .page3 .left li {
+        font-size: 5vw;
+    }
+
+    .page3 img {
+        width: 80%;
+        height: auto;
+        max-height: 400px;
+    }
+
+    .page3 .right {
+        height: auto;
+        gap: 10vw;
+        width: 100%;
+        align-items: flex-start;
+        font-size: 5vw;
+        margin-top: 5vw;
+    }
+}
+
+@media (max-width: 480px) {
+    .page1 h1 {
+        font-size: 18vw;
+    }
+
+    .left-card {
+        width: 90vw;
+    }
+
+    .page3 .left #software {
+        font-size: 14vw;
+    }
+
+    .page3 .left #skills {
+        font-size: 15vw;
+    }
+}

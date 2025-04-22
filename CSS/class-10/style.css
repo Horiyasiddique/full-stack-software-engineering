@@ -1,0 +1,22 @@
+body {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff1f1;
+
+}
+
+/*BOX SHADOW VALUES :  y-axis, x-axis, blur, spread, color */
+
+.box {
+    width: 150px;
+    height: 300px;
+    border-radius: 20px;
+    box-shadow: 10px 10px 15px black;
+    background-color: white;
+    color: #313131;
+}

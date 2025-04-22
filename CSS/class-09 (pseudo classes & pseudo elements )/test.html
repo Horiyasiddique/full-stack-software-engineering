@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Wavy Card</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #e0e0e0;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    .card {
+      width: 400px;
+      height: 230px;
+      background: white;
+      border-radius: 20px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+      position: relative;
+      overflow: hidden;
+      padding: 1.5rem;
+    }
+
+    /* Wave top using ::before */
+    .card::before {
+      content: '';
+      position: absolute;
+      top: -60px;
+      left: 0;
+      width: 120%;
+      height: 120px;
+      background: linear-gradient(135deg, #4caf50, #8bc34a);
+      border-bottom-left-radius: 50% 60%;
+      border-bottom-right-radius: 50% 60%;
+      transform: rotate(-2deg);
+      z-index: 1;
+    }
+
+    /* Optional: extra depth with ::after */
+    .card::after {
+      content: '';
+      position: absolute;
+      top: -40px;
+      left: 0;
+      width: 120%;
+      height: 100px;
+      background: #66bb6a;
+      border-bottom-left-radius: 50% 50%;
+      border-bottom-right-radius: 50% 50%;
+      opacity: 0.3;
+      transform: rotate(-2deg);
+      z-index: 0;
+    }
+
+    .card-content {
+      position: relative;
+      z-index: 2;
+      color: #333;
+    }
+
+    .card-content h2 {
+      margin-top: 60px;
+      font-size: 1.4rem;
+    }
+
+    .card-content p {
+      margin-top: 4px;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="card-content">
+      <h2>Your Name</h2>
+      <p>Job Position</p>
+      <p>📞 +00 123 456 789</p>
+      <p>📧 email@example.com</p>
+      <p>📍 Your City</p>
+    </div>
+  </div>
+</body>
+</html>
