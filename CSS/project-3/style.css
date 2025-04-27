@@ -99,7 +99,7 @@ nav ul li a {
     font-family: 'Abril Fatface';
     font-weight: 600;
     text-transform: uppercase;
-    z-index: 3;
+    z-index: 2;
     position: relative;
 }
 
@@ -121,7 +121,6 @@ nav ul li a {
     top: 100%;
     left: 20%;
     transform: translateY(-50%);
-    z-index: 10;
     border-radius: 10px;
 }
 
@@ -136,7 +135,7 @@ nav ul li a {
     color: white;
     font-size: 1.2vw;
     font-weight: 300;
-    z-index: 2;
+    
 }
 
 .page1 i {
