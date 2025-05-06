@@ -1,12 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
 /*Abril Fatface*/
 @import url('https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&display=swap');
-/*UnifrakturCook*/
-@import url('https://fonts.googleapis.com/css2?family=Tagesschrift&display=swap');
 /* tagesheriff */
 @import url('https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap');
-/*inter*/
+/*inter tight*/
 @import url('https://fonts.googleapis.com/css2?family=Elsie+Swash+Caps:wght@400;900&display=swap');
+/* ELsie Swash Caps */
 
 * {
     margin: 0;
@@ -18,7 +17,23 @@
 html,
 body {
     width: 100%;
+    background-color: #344C36;
     height: 100%;
+    overflow-x: hidden;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+/* General Styling */
+i {
+    color: orange;
+}
+
+*::selection {
+    background-color: #f7a000;
+    color: #264734;
 }
 
 nav {
@@ -39,10 +54,6 @@ nav {
 nav h1 {
     font-family: 'UnifrakturCook';
     font-weight: 300;
-}
-
-nav h1 i {
-    color: orange;
 }
 
 nav ul {
@@ -75,57 +86,51 @@ nav ul li a {
 
 .page1 {
     max-width: 100vw;
-    height: 60vh;
-    margin-top: 5vw;
+    height: 80vh;
     background-color: #344c36;
-    padding-top: 10vh;
-    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
     position: relative;
-   
-
+    margin-top: 20vh;
 }
 
-.image{
+.image {
     background-image: url('https://cdn.pixabay.com/photo/2023/01/24/13/23/viet-nam-7741017_640.jpg');
-    width: 210px;
-    height: 340px;
-    background-size: cover;
-    background-position: center;
-    position: absolute;
-    top: 100%;
-    left: 20%;
-    transform: translateY(-50%);
     border-radius: 10px;
-    z-index: 2;
+    position: absolute;
+    top: 20%;
+    z-index: 1;
+    left: 12%;
+    width: 15rem;
+    background-size: cover;
+    height: 20rem;
 }
 
 .headings {
     text-align: center;
-    position: absolute;
-    top: 15%;
-    left: 50%;
-    transform: translateX(-50%);
+    font-size: 2.5rem;
+    line-height: 1.25;
+    font-weight: 500;
+    color: transparent;
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    font-family: 'Abril fatface', cursive;
+    text-transform: uppercase;
 }
 
 
 #upper-heading {
     color: #D9D2C1;
-    font-size: 7.5vw;
-    font-family: 'Abril Fatface';
-    font-weight: 600;
-    text-transform: uppercase;
-    z-index: 3;
-    position: relative;
+    z-index: 2;
+
 }
 
 .lowered-heading {
-    font-size: 7.5vw;
-    font-weight: 600;
-    text-transform: uppercase;
-    -webkit-text-stroke: 1px #f7a000;
+    -webkit-text-stroke: 0.8px #f7a000;
     color: transparent;
-    position: relative;
-    top: -1.5vw;
+
 }
 
 .card {
@@ -139,55 +144,100 @@ nav ul li a {
     color: white;
     font-size: 1.2vw;
     font-weight: 300;
-    
-}
 
-.page1 i {
-    color: #f7a000;
 }
 
 #big {
     font-size: 4vw;
     position: absolute;
-    top: 28%;
-    left: 18%;
+    top: 18%;
+    left: 10%;
     z-index: 3;
 }
 
 #med {
     font-size: 3vw;
     position: absolute;
-    top: 36%;
-    left: 17%;
+    top: 32%;
+    left: 11%;
     z-index: 3;
 }
 
 #sm {
-    font-size: 2vw;
+    font-size: 2.2vw;
     position: absolute;
-    top: 88%;
-    left: 42%;
+    top: 78%;
+    left: 28%;
     z-index: 3;
 }
 
-/* page 2 styling */
-.page2 {
+.interest {
     max-width: 100vw;
-    height: 30vh;
-    background-color: #000;
+    background-color: black;
+    min-height: 25vh;
+    position: relative;
     color: white;
-    z-index: 1;
-
 }
 
-.page2 p {
+.interest p {
+    max-width: 30vw;
+    padding: 20px;
+    z-index: 5;
+    line-height: 15px;
+    font-weight: 400;
     font-family: 'inter tight';
-    font-size: 1vw;
-    width: 32vw;
-    font-weight: 300;
-    padding: 3vw 0 0 4vw;
-    line-height: 1.6vw;
+    font-size: 10px;
+    position: relative;
+}
 
+.scroll-btn {
+    max-width: 75px;
+    min-height: 75px;
+    border-radius: 50%;
+    display: flex;
+    place-content: center;
+    background-color: #f7a000;
+    padding: 5px;
+    left: 50%;
+    position: absolute;
+    z-index: 9;
+    animation: bounce 1s ease-in infinite;
+}
+
+.scroll-btn button {
+    background-color: transparent;
+    outline: none;
+    border: none;
+}
+
+@keyframes bounce {
+    70% {
+        transform: translateY(0%);
+    }
+
+    80% {
+        transform: translateY(-15%);
+    }
+
+    90% {
+        transform: translateY(0%);
+    }
+
+    95% {
+        transform: translateY(-7%);
+    }
+
+    97% {
+        transform: translateY(0%);
+    }
+
+    99% {
+        transform: translateY(-3%);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
 }
 
 /* page 3 styling */
@@ -234,10 +284,15 @@ nav ul li a {
     color: white;
 }
 
+.page3 .right {
+    position: relative;
+    bottom: -17%;
+    z-index: 2;
+}
+
 .aboutMe-card {
     position: relative;
     width: 210px;
-   
 
 }
 
@@ -259,6 +314,7 @@ nav ul li a {
     display: flex;
     justify-content: center;
     align-items: center;
+
 }
 
 .image-wrapper img {
@@ -268,7 +324,7 @@ nav ul li a {
     border-radius: 10px;
     position: relative;
     z-index: 2;
-    top: -30%;
+
 }
 
 .badge {
@@ -319,11 +375,9 @@ nav ul li a {
 
 .contact-part h3 {
     font-size: 1vw;
-  
-    
 }
 
-.contact-part h3 span{
+.contact-part h3 span {
     color: white;
     font-size: 1vw;
     font-family: 'inter tight';
@@ -336,8 +390,120 @@ nav ul li a {
 
 }
 
+/* page 4 styling */
+.page4 {
+    max-width: 100vw;
+    min-height: 100vh;
+    background-color: #344C36;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0vw 7vw;
+    color: #D9D2C1;
+    position: relative;
+}
+
+.page4 .left {
+    display: flex;
+    flex-direction: column;
+    gap: 2vw;
+}
+
+.duration-skills {
+    display: flex;
+    flex-direction: column;
+    gap: 1vw;
+}
+
+.duration {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5vw;
+
+}
+
+.duration p,
+.exp-timeline p {
+    width: 20vw;
+    font-size: 10px;
+    font-family: 'inter tight';
+    font-weight: 400;
+}
+
+.experience-card {
+    width: 300px;
+    height: 250px;
+    color: #000;
+    background-color: #f7a000;
+    display: flex;
+    flex-direction: column;
+    padding: 2vw 3vw;
+    gap: 1vw;
+    font-family: 'abril fatface', sans-serif;
+    position: absolute;
+    bottom: -33%;
+}
+
+.experience-card h3 {
+    font-weight: 200;
+    font-size: 18px;
+}
+
+
+.experience-durations {
+    display: flex;
+    flex-direction: column;
+    gap: 1vw;
+
+}
+
+.exp-timeline {
+    display: flex;
+    flex-direction: row;
+    gap: 1.2vw;
+
+}
+
+.exp-timeline i {
+    color: #fff;
+}
+
+.page4 .right .resume {
+    font-size: 2.3rem;
+    line-height: 3.8rem;
+    -webkit-text-stroke: 0.1px #f7a000;
+    font-family: 'Abril Fatface';
+    font-weight: 600;
+    color: transparent;
+    text-transform: uppercase;
+    position: absolute;
+    top: -18%;
+    right: 12%;
+}
+
+.page4 .right .resume #tech {
+    font-size: 1rem;
+    top: 100%;
+    line-height: 0;
+    position: absolute;
+    color: white;
+    font-weight: 400;
+    -webkit-text-stroke: 0px transparent;
+
+}
+
+.page4 .right ul {
+    list-style: none;
+    font-family: 'inter tight';
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 17px;
+    color: #D9D2C1;
+
+}
+
 /* page 5 styling */
-.page5{
+.page5 {
     max-width: 100vw;
     height: 100vh;
     display: flex;
@@ -347,7 +513,8 @@ nav ul li a {
     background-color: #F7EFE2;
 }
 
-.page5 .left h5{
+.page5 .left h5,
+.experience-card h2 {
     font-size: 3vw;
     color: black;
     font-weight: 600;
@@ -355,18 +522,19 @@ nav ul li a {
     margin-bottom: 2vw;
 }
 
-.activity{
+#edu-head {
+    color: #f7a000;
+    font-family: 'Elsie Swash Caps', serif;
+}
+
+.activity {
     display: flex;
     justify-content: center;
     gap: 1.2vw;
-    margin-bottom: 2vw;
     width: 35vw;
     align-items: flex-start;
 }
 
-i{
-    color: #FDAF1C;
-}
 
 .page5 .right {
     display: flex;
@@ -377,28 +545,28 @@ i{
 
 }
 
-.lang{
+.lang {
     display: flex;
     flex-direction: column;
     gap: 2vw;
 }
 
-.lang h2{
+.lang h2 {
     font-size: 3vw;
     color: black;
     font-weight: 600;
     font-family: 'Elsie Swash Caps', serif;
-    
+
 }
 
-.languages{
+.languages {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 1.8vw;
 }
 
-.right h3{
+.right h3 {
     font-family: 2vw;
     font-family: 'Elsie Swash Caps', serif;
     color: black;
@@ -406,14 +574,14 @@ i{
     margin-bottom: 0.5vw;
 }
 
-.page5 .right p{
+.page5 .right p {
     font-family: 'inter tight';
     color: #414141;
     font-weight: 500;
     font-size: 1.3vw;
 }
 
-.hobbies h2{
+.hobbies h2 {
     font-size: 3vw;
     color: black;
     font-weight: 600;
@@ -421,19 +589,216 @@ i{
     margin-bottom: 1vw;
 }
 
-.hobby-icons{
+.hobby-icons {
     display: flex;
     justify-content: flex-start;
     align-items: center;
     gap: 2vw;
-    
+
 }
 
-.hobby-icons i{
+.hobby-icons i {
     font-size: 2.5vw;
     font-weight: 800;
 }
 
-.hobby-icons p{
+.hobby-icons p {
     margin-top: 1vw;
+}
+
+/* Mobile Responsive Styles */
+@media only screen and (max-width: 768px) {
+    /* General Styles */
+    body {
+        overflow-x: hidden;
+    }
+    
+    /* Navigation */
+    nav {
+        padding: 15px 20px;
+    }
+    
+    nav h1 {
+        font-size: 24px;
+    }
+    
+    nav ul {
+        display: none; /* Hide desktop nav on mobile */
+    }
+    
+    /* Page 1 */
+    .page1 {
+        flex-direction: column;
+        height: auto;
+        margin-top: 15vh;
+        padding: 20px;
+    }
+    
+    .headings {
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+    }
+    
+    .image {
+        position: relative;
+        left: auto;
+        top: auto;
+        width: 150px;
+        height: 150px;
+        margin: 0 auto 20px;
+    }
+    
+    #big, #med, #sm {
+        display: none; /* Hide gemini icons on mobile */
+    }
+    
+    .card {
+        position: relative;
+        top: auto;
+        right: auto;
+        margin: 20px auto;
+        width: 80%;
+        font-size: 14px;
+    }
+    
+    /* Interest Section */
+    .interest p {
+        max-width: 80%;
+        font-size: 12px;
+        line-height: 1.5;
+        padding: 30px 20px;
+    }
+    
+    .scroll-btn {
+        left: 40%;
+        bottom: -35px;
+    }
+    
+    /* Page 3 */
+    .page3 {
+        flex-direction: column;
+        height: auto;
+        padding: 40px 20px;
+    }
+    
+    .page3 .left {
+        width: 100%;
+        margin-bottom: 40px;
+    }
+    
+    .page3 .left h2 {
+        font-size: 2rem;
+    }
+    
+    .page3 .left p {
+        width: 100%;
+        font-size: 14px;
+        line-height: 1.5;
+    }
+    
+    .page3 .left div {
+        font-size: 14px;
+        padding: 8px 15px;
+    }
+    
+    .page3 .right {
+        position: relative;
+        bottom: auto;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    
+    /* Page 4 */
+    .page4 {
+        flex-direction: column;
+        padding: 40px 20px;
+        height: auto;
+    }
+    
+    .page4 .left {
+        width: 100%;
+        margin-bottom: 40px;
+    }
+    
+    .duration p, .exp-timeline p {
+        width: 100%;
+        font-size: 12px;
+    }
+    
+    .experience-card {
+        position: relative;
+        width: 100%;
+        bottom: auto;
+        margin-top: 20px;
+    }
+    
+    .page4 .right {
+        width: 100%;
+        position: relative;
+    }
+    
+    .page4 .right .resume {
+        position: relative;
+        top: auto;
+        right: auto;
+        font-size: 1.5rem;
+        line-height: 2rem;
+        margin-bottom: 20px;
+    }
+    
+    .page4 .right #tech {
+        position: relative;
+        top: auto;
+        font-size: 1.5rem;
+    }
+    
+    .coding-skills {
+        margin-top: 20px;
+    }
+    
+    /* Page 5 */
+    .page5 {
+        flex-direction: column;
+        height: auto;
+        padding: 40px 20px;
+        align-items: flex-start;
+    }
+    
+    .page5 .left, .page5 .right {
+        width: 100%;
+    }
+    
+    .page5 .left h5, .lang h2, .hobbies h2 {
+        font-size: 1.8rem;
+    }
+    
+    .activity {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    
+    .languages {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+    
+    .hobby-icons {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+    
+    .hobby-icons i {
+        font-size: 24px;
+    }
+    
+    .hobby-icons p {
+        font-size: 14px;
+    }
+    
+    /* Contact Part */
+    .contact-part h3, .contact-part h3 span {
+        font-size: 14px;
+    }
 }

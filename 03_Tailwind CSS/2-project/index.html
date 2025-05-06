@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Onepage Folio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .writing-vertical {
+            writing-mode: vertical-rl;
+            text-orientation: mixed;
+        }
+    </style>
+</head>
+
+<body class="bg-pink-200 md:bg-red-400 lg:bg-blue-100 flex items-center justify-center min-h-screen p-4 p-14">
+
+    <div class="bg-[#F3F3F3] w-[90%] max-w-8xl grid grid-cols-4 grid-rows-4 gap-10 shadow-2xl" style="background-image: linear-gradient(to right, #dcdee0 1px, transparent 1px),
+                  linear-gradient(to bottom, #dcdee0 1px, transparent 1px);
+              background-size: calc(100% / 4) calc(100% / 4);">
+
+        <!-- 1st Row: Greeting -->
+        <div class="col-span-3 row-span-1 p-6 text-2xl font-medium text-gray-700">
+            Hello web cowboy,
+        </div>
+        <div
+            class="row-span-4 flex justify-center items-center text-gray-400 gap-7 text-xs tracking-widest writing-vertical">
+            <div>LINKEDIN</div>
+            <div>DRIBBBLE</div>
+            <div>TWITTER</div>
+        </div>
+
+        <!-- 2nd Row: Name -->
+        <div class="col-span-3 px-6 text-8xl font-extrabold leading-none">
+            I’m <span class="text-black">Kaan</span><sup class="text-blue-500 text-5xl">*</sup>
+        </div>
+
+        <!-- 3rd Row: Bio and Links Side-by-Side -->
+        <div class="col-span-2 px-6 text-sm text-gray-600 leading-relaxed">
+            Hi! I’m a UX/UI Designer based in Paris. Everyday I learn, read and practice to create the best interfaces
+            as possible. It’s beautiful to have a passion and a work at the same time, don’t you think?
+        </div>
+        <div class="col-span-1 flex flex-col justify-center px-6 space-y-2 text-sm">
+            <a href="#" class="border-b-2 border-black text-black w-fit">If you want my resume<sup>**</sup></a>
+            <a href="#" class="border-b-2 border-black text-black w-fit">Or have chat</a>
+        </div>
+
+        <!-- 4th Row: Footer note -->
+        <div class="col-start-3 col-span-1 px-6 pb-6 text-xs text-gray-500">
+            * A very passionate and competent person open to freelance offers and internship.
+        </div>
+
+    </div>
+
+
+    
+</body>
+
+</html>
