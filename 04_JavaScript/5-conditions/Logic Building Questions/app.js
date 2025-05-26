@@ -15,7 +15,7 @@ const checkNumber =
   num1 % 2 === 0 ? "It is an even number" : "It is an odd number";
 console.log(checkNumber);
 
-// Q4: Write a JS program to check whether year is leap year or not using conditional operator.❗❗❗
+// Q4: Write a JS program to check whether year is leap year or not using conditional operator.
 let year = 2025;
 if ((year % 4 === 0 && year % 100 !== 0) || year % 400 === 0) {
   console.log(`${year} is leap year`);
