@@ -2,35 +2,26 @@
 // Q1: Write a JS program to find maximum between two numbers using JSonditional operator.
 let num1 = 10;
 let num2 = 20;
-if (num1 > num2) {
-  console.log("Num1 is greater than num2");
-} else if (num2 > num1) {
-  console.log("num2 is greater than num1");
-} else {
-  console.log("Both are equal");
-}
+const max = num1 > num2 ? num1 : num2;
+console.log(`${max} is largest nymber`);
 
 // Q2: Write a JS program to find maximum between three numbers using conditional operator.
 let num3 = 30;
-if (num1 > num2 && num1 > num3) {
-  console.log("num1 is greater");
-} else if (num2 > num1 && num2 > num3) {
-  console.log("num2 is greater");
-} else if (num3 > num1 && num3 > num2) {
-  console.log("num3 is greater");
-} else {
-  console.log("all are equal");
-}
+const max2 = num1 >= num2 && num1 >= num3 ? num1 : num2 >= num3 ? num2 : num3;
+console.log(`Largest number is:  ${max2}`);
 
 // Q3: Write a JS program to check whether a number is even or odd using conditional operator.
-if (num1 % 2 === 0) {
-  console.log("It is an even number");
-} else {
-  console.log("It is an odd number");
-}
+const checkNumber =
+  num1 % 2 === 0 ? "It is an even number" : "It is an odd number";
+console.log(checkNumber);
 
 // Q4: Write a JS program to check whether year is leap year or not using conditional operator.❗❗❗
-// Q5: Write a JS program to check whether character is an alphabet or not using conditional operator.❗❗❗
+let year = 2025;
+if ((year % 4 === 0 && year % 100 !== 0) || year % 400 === 0) {
+  console.log(`${year} is leap year`);
+} else {
+  console.log(`${year} year is not a leap year`);
+}
 
 // *************** If Else statements ********************
 // Q1: Write a JS program to check whether a number is negative, positive or zero.
@@ -64,38 +55,49 @@ if (
 }
 
 // Q4: Write a JS program to input any character and check whether it is alphabet, digit or special character.
+let char = "a";
+const charCode = char.charCodeAt(0);
+if ((charCode >= 65 && charCode <= 90) || (charCode >= 97 && charCode <= 122)) {
+  console.log("The character is an alphabet.");
+} else if (charCode >= 48 && charCode <= 57) {
+  console.log("The character is a digit.");
+} else {
+  console.log("The character is a special character.");
+}
+
 // Q5: Write a JS program to check whether a character is uppercase or lowercase alphabet.
+if (charCode >= 65 && charCode <= 90) {
+  console.log("the character is uppercase");
+} else if (charCode >= 97 && charCode <= 122) {
+  console.log("the character is lowercase");
+} else {
+  console.log("It is not alphabet");
+}
+
 // Q6: Write a JS program to input week number and print week day.
 let weekNumber = 4;
-    if (weekNumber < 1 || weekNumber > 7) {
-        console.log("Invalid week number. Please enter a number between 1 and 7.");
-    }else if (weekNumber === 1) {
-        weekday = "Sunday";
-    } else if (weekNumber === 2) {
-        weekday = "Monday";
-    } else if (weekNumber === 3) {
-        weekday = "Tuesday";
-    } else if (weekNumber === 4) {
-        weekday = "Wednesday";
-    } else if (weekNumber === 5) {
-        weekday = "Thursday";
-    } else if (weekNumber === 6) {
-        weekday = "Friday";
-    } else if (weekNumber === 7) {
-        weekday = "Saturday";
-    }
-    
-    console.log(`Weekday for week number ${weekNumber} is ${weekday}.`);
+let weekday;
+if (weekNumber < 1 || weekNumber > 7) {
+  console.log("Invalid week number. Please enter a number between 1 and 7.");
+} else if (weekNumber === 1) {
+  weekday = "Sunday";
+} else if (weekNumber === 2) {
+  weekday = "Monday";
+} else if (weekNumber === 3) {
+  weekday = "Tuesday";
+} else if (weekNumber === 4) {
+  weekday = "Wednesday";
+} else if (weekNumber === 5) {
+  weekday = "Thursday";
+} else if (weekNumber === 6) {
+  weekday = "Friday";
+} else if (weekNumber === 7) {
+  weekday = "Saturday";
+}
 
-/**
-Q7: Write a JS program to input marks of five subjects Physics, Chemistry, Biology, Mathematics and Computer. Calculate percentage and grade according to following:
-Percentage >= 90% : Grade A
-Percentage >= 80% : Grade B
-Percentage >= 70% : Grade C
-Percentage >= 60% : Grade D
-Percentage >= 40% : Grade E
-Percentage < 40% : Grade F
- */
+console.log(`Weekday for week number ${weekNumber} is ${weekday}.`);
+
+// Q7: Write a JS program to input marks of five subjects Physics, Chemistry, Biology, Mathematics and Computer. Calculate percentage and grade.
 
 const PhyMarks = 18;
 const ChemMarks = 14;
