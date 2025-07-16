@@ -431,8 +431,8 @@ nav ul li a {
 }
 
 .experience-card {
-    width: 350px;
-    height: 250px;
+    width: 500px;
+    height: 300px;
     color: #000;
     background-color: #f7a000;
     display: flex;
@@ -446,7 +446,7 @@ nav ul li a {
 
 .experience-card h3 {
     font-weight: 200;
-    font-size: 18px;
+    font-size: 20px;
 }
 
 

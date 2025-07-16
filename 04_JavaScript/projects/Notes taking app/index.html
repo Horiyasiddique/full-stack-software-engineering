@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colorful Notes App</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .grid-bg {
+            background-image:
+                linear-gradient(to right, rgba(200, 200, 255, 0.1) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(200, 200, 255, 0.1) 1px, transparent 1px);
+            background-size: 30px 30px;
+        }
+    </style>
+</head>
+
+<body class="min-h-screen grid-bg bg-sky-50 p-4 md:p-8">
+    <div class="max-w-4xl mx-auto">
+        <!-- Header -->
+        <header class="mb-8 text-center">
+            <h1
+                class="text-4xl font-bold bg-gradient-to-r from-purple-600 via-pink-500 to-yellow-400 bg-clip-text text-transparent mb-2">
+                Colorful Notes</h1>
+            <p class="text-sky-700">Capture your thoughts in vibrant colors</p>
+        </header>
+
+        <!-- Input Form -->
+        <div class="bg-white rounded-xl shadow-lg p-6 mb-8 border border-sky-100">
+            <div class="mb-4">
+                <label for="title" class="block text-sm font-medium text-sky-700 mb-1">Title</label>
+                <input type="text" name="title" id="title"
+                    class="w-full px-4 py-2 rounded-lg border border-sky-200 focus:ring-2 focus:ring-yellow-400 focus:border-transparent placeholder-sky-300"
+                    placeholder="Note title" required>
+            </div>
+
+            <div class="mb-4">
+                <label for="notes" class="block text-sm font-medium text-sky-700 mb-1">Your Note</label>
+                <textarea name="notes" id="notes" rows="4"
+                    class="w-full px-4 py-2 rounded-lg border border-sky-200 focus:ring-2 focus:ring-pink-400 focus:border-transparent placeholder-sky-300"
+                    placeholder="Write your thoughts here..."></textarea>
+            </div>
+
+            <button id="addBtn"
+                class="w-full bg-gradient-to-r from-purple-500 to-pink-500 text-white py-3 px-6 rounded-lg font-medium hover:opacity-90 transition-all shadow-md hover:shadow-lg">
+                Add Note
+            </button>
+        </div>
+
+        <!-- Notes Container -->
+        <div id="notesContainer" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+           
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
